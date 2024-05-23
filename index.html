@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万涉科技</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .page {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .page.active {
+            display: block;
+        }
+        .home-page {
+            background: linear-gradient(120deg, #1E90FF 0%, #FFA500 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
+            background-color: #00509E;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 36px;
+            width: 100%;
+        }
+        .content {
+            text-align: center;
+            margin: 20px;
+        }
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            background-color: #FFA500;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #FF8C00;
+            transform: scale(1.1);
+        }
+        .tech-page {
+            background-color: #000;
+            color: #fff;
+        }
+        .tech-page .header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .tech-page .header img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .tech-page .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .tech-page .header p {
+            margin: 5px 0;
+        }
+        .tech-page .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #111;
+            padding: 10px;
+        }
+        .tech-page .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .tech-page .shorts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        .tech-page .short {
+            background-color: #222;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            width: calc(33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .tech-page .short img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .tech-page .short p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page home-page active" id="homePage">
+        <header>
+            万涉科技
+        </header>
+        <div class="content">
+            <h2>高级服务业，专业团队</h2>
+            <p>我们致力于打造专业程序，提供卓越的服务。无论您需要什么样的技术支持，我们的专业团队都能为您提供最佳解决方案。</p >
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="showTechPage()">点击后向下滑动隐藏🫥界面</button>
+        </div>
+    </div>
+
+    <div class="page tech-page" id="techPage">
+        <div class="header">
+            <img src="profiles.jpg" alt="Profile Picture">
+            <h1>万涉科技</h1>
+            <p>学生隐藏连接超优惠Wechat 👉 <a href=" " style="color: #00f;">alinblinclindlin</a ></p >
+        </div>
+
+        <div class="navbar">
+            <a href="#">首页</a >
+            <a href="#">视频</a >
+            <a href="#">Shorts</a >
+            <a href="#">社区</a >
+        </div>
+
+        <div class="shorts">
+            <div class="short">
+                <img src="short1.jpg" alt="Short 1">
+                <p>观看次数: 453次</p >
+            </div>
+            <div class="short">
+                <img src="short2.jpg" alt="Short 2">
+                <p>观看次数: 2473次</p >
+            </div>
+            <div class="short">
+                 <img src="short3.jpg" alt="Short 3">
+                <p>观看次数: 1490次</p >
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTechPage() {
+            document.getElementById('homePage').classList.remove('active');
+            document.getElementById('techPage').classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
